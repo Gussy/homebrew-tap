@@ -3,7 +3,7 @@ cask "cmt" do
   name "cmt"
   desc "Generate contextual git commit messages using Claude AI"
   homepage "https://github.com/gussy/cmt"
-  version "0.1.3"
+  version "0.1.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,23 +17,34 @@ cask "cmt" do
   on_macos do
     on_intel do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_darwin_amd64.tar.gz"
-      sha256 "3f6d73ee50f359aaeed52ad2c41fcfe580775cf67cacd9f1a05600e8cfcf10d0"
+      sha256 "c67a241f1656bd1693f4e13551a2ddeb2f9897ce9a874cc7e98304d6bb536010"
     end
     on_arm do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_darwin_arm64.tar.gz"
-      sha256 "06e083579f5a576f29bce9efd23f90bfdefb961a834183f7479840634d41cff8"
+      sha256 "b80ccfb3eab36631a498499e27726f8c009c94187ad8ba8e86d01e7958e3fbec"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_linux_amd64.tar.gz"
-      sha256 "511c8d3023aa0aef45d453106fa8b164561739ad20ef1d719956328351b66cf2"
+      sha256 "3b081e1c32e0fc51112ddb25896c5b4ddeba883480e358b3843b5e50b84c3341"
     end
     on_arm do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_linux_arm64.tar.gz"
-      sha256 "68170767ed66d44a3e640255a44fc0ab1baeca9c84e2b2e320e35975c46d3377"
+      sha256 "21641e0d7ed3ef97e810cc435b8316e4d2899e818aa69731aa985bf8399d327e"
     end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cmt"]
+    end
+  end
+
+  caveats do
+    "Note: This tool removes macOS quarantine attributes to allow execution."
+    "The binary is not code-signed or notarized by Apple."
   end
 
   # No zap stanza required
