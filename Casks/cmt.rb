@@ -3,7 +3,7 @@ cask "cmt" do
   name "cmt"
   desc "Generate contextual git commit messages using Claude AI"
   homepage "https://github.com/gussy/cmt"
-  version "0.1.4"
+  version "0.2.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "cmt" do
   on_macos do
     on_intel do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_darwin_amd64.tar.gz"
-      sha256 "c67a241f1656bd1693f4e13551a2ddeb2f9897ce9a874cc7e98304d6bb536010"
+      sha256 "89b176177c708f3f8418e54b59f5635f7089d89ceb8dc25981604e476b0a5a4c"
     end
     on_arm do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_darwin_arm64.tar.gz"
-      sha256 "b80ccfb3eab36631a498499e27726f8c009c94187ad8ba8e86d01e7958e3fbec"
+      sha256 "51b89f2fe57b3e8ce27722d98237d1a40ff994897433b03e3051d14bb7f538b2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_linux_amd64.tar.gz"
-      sha256 "3b081e1c32e0fc51112ddb25896c5b4ddeba883480e358b3843b5e50b84c3341"
+      sha256 "0d899bf5cc719874dde1c41db3957a5468b6f4ad93cc7afc8a60a5b31b59c215"
     end
     on_arm do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_linux_arm64.tar.gz"
-      sha256 "21641e0d7ed3ef97e810cc435b8316e4d2899e818aa69731aa985bf8399d327e"
+      sha256 "e2a5eccaa4badaa66a74adacc28b9be9cc3f5df0a6abd72220638c4d7a959fe4"
     end
   end
 
