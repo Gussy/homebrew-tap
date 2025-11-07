@@ -17,22 +17,22 @@ cask "cmt" do
   on_macos do
     on_intel do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_darwin_amd64.tar.gz"
-      sha256 "28d4176dd23c6953ee2bde39b58e29d4148f7eaa06d64fe917cd837fb4fe87ce"
+      sha256 "bc08a47a2726d51651a36054bb91b4572d11c077bc4205430e0828516950a991"
     end
     on_arm do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_darwin_arm64.tar.gz"
-      sha256 "d59c0af20091e926c78b11a348d6fdb16605cbdaadc9614466253a27fdff037d"
+      sha256 "40bb4ab208b2f2b4d43b9b86c05ef2b5ea621f2238efddf2e9234c968c3bf4fa"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_linux_amd64.tar.gz"
-      sha256 "59541b4a916f832315dac9bf87a37117563930ab25a416d947ce01f094ea1c59"
+      sha256 "72763aadaa00b18fdc63732c92bf599af82cfed37056a028e18f81b7af0116e4"
     end
     on_arm do
       url "https://github.com/Gussy/cmt/releases/download/v#{version}/cmt_linux_arm64.tar.gz"
-      sha256 "450473c535a3568c52758591bc27b2ae2824db869a1d966b4269fdb3363891fd"
+      sha256 "f36e13061a44362e7a7ea3e6ca775fee0aaec8ba0f321f58c3b7cdb18a672375"
     end
   end
 
